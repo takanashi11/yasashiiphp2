@@ -1,4 +1,4 @@
 <?php
 print_r($_POST);
-echo $_POST['recipe_name'];
+echo htmlspecialchars($_POST['recipe_name'],ENT_QUOTES,'UTF-8');
 ?>
