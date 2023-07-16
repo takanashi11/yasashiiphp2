@@ -7,7 +7,7 @@
 <body>
 <pre>
 <?php
-print_r($_POST);
+//print_r($_POST);
 echo htmlspecialchars($_POST['recipe_name'],ENT_QUOTES,'UTF-8');
 echo "<br>";
 if ($_POST['category'] === '1') echo "和食";
