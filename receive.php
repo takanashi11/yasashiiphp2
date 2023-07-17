@@ -26,6 +26,8 @@ if (is_numeric($_POST['budget'])) {
  echo number_format($_POST['budget']);
 }
 echo "<br>";
+echo nl2br(htmlspecialchars($_POST['howto'],ENT_QUOTES,'UTF-8'));
+echo "<br>"
 ?>
 </pre>
 </body>
