@@ -22,6 +22,10 @@ if ($_POST['difficulty'] === '1') {
  echo "難しい";
 }
 echo "<br>";
+if (is_numeric($_POST['budget'])) {
+ echo number_format($_POST['budget']);
+}
+echo "<br>";
 ?>
 </pre>
 </body>
