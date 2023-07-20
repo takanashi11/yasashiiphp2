@@ -11,6 +11,14 @@ echo "<table>\n";
 echo "<tr>\n";
 echo "<th>料理名</th><th>予算</th><th>難易度</th>\n";
 echo "</tr>\n";
+foreach ($result as $row) {
+print_r($row);
+echo "<tr>\n";
+echo "<td>" . htmlspecialchars($row['recipe_name'],ENT_QUOTES, 'UTF-8') . "</td>\n";
+echo "<td>" . htmlspecialchars($row['budget'],ENT_QUOTES, 'UTF-8') . "</td>\n";
+echo "<td>" . htmlspecialchars($row['difficulty'],ENT_QUOTES, 'UTF-8') . "</td>\n";
+echo "</tr>\n";
+}
 echo "</table>\n";
 $dbh = null;
 } catch (Exception $e) {
