@@ -1,6 +1,5 @@
 <?php
-$user ="suzuki";
-$pass ="Pw111";
+require_once '\MAMP\db_config.php';
 $recipe_name = $_POST['recipe_name'];
 $howto = $_POST['howto'];
 $category = (int) $_POST['category'];
@@ -22,7 +21,7 @@ $stmt->bindValue(5, $howto, PDO::PARAM_INT);
 $stmt->bindValue(6, $id, PDO::PARAM_INT);
 $stmt->execute();
 $dbh = null;
-echo "ID:" . htmlspecialchars($id,ENT_QUOTES,'UTF-8') . "レシピの更新が完了しました。";
+echo "ID:" . htmlspecialchars($id,ENT_QUOTES,'UTF-8') . "レシピの更新が完了しました。<br>";
 echo "<a href='index.php'>トップページへ戻る</a>";
 } catch (Exception $e) {
 echo "エラー発生: " . htmlspecialchars($e->getMessage(), ENT_QUOTES, 'UTF-8') . "<br>";
