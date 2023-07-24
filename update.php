@@ -23,6 +23,7 @@ $stmt->bindValue(6, $id, PDO::PARAM_INT);
 $stmt->execute();
 $dbh = null;
 echo "ID:" . htmlspecialchars($id,ENT_QUOTES,'UTF-8') . "レシピの更新が完了しました。";
+echo "<a href='index.php'>トップページへ戻る</a>";
 } catch (Exception $e) {
 echo "エラー発生: " . htmlspecialchars($e->getMessage(), ENT_QUOTES, 'UTF-8') . "<br>";
 die();
