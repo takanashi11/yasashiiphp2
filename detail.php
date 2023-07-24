@@ -1,6 +1,5 @@
 <?php
-$user ="suzuki";
-$pass ="Pw111";
+require_once '\MAMP\db_config.php';
 try {
 if (empty($_GET['id'])) throw new Exception('ID不正');
 $id = (int) $_GET['id'];
@@ -18,6 +17,7 @@ echo "予算:" . htmlspecialchars($result['budget'],ENT_QUOTES,'UTF-8') . "<br>\
 echo "難易度:" . htmlspecialchars($result['difficulty'],ENT_QUOTES,'UTF-8') . "<br>\n";
 echo "作り方:<br>" . nl2br(htmlspecialchars($result['howto'],ENT_QUOTES,'UTF-8')) . "<br>\n";
 $dbh = null;
+echo "<a href='index.php'>トップページへ戻る</a>";
 } catch (Exception $e) {
 echo "エラー発生: " . htmlspecialchars($e->getMessage(), ENT_QUOTES, 'UTF-8') . "<br>";
 die();

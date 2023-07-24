@@ -1,6 +1,5 @@
 <?php
-$user ="suzuki";
-$pass ="Pw111";
+require_once '\MAMP\db_config.php';
 try {
 if (empty($_GET['id'])) throw new Exception('ID不正');
 $id = (int) $_GET['id'];
@@ -49,5 +48,6 @@ die();
 <input type="hidden" name="id" value="<?php echo htmlspecialchars($result['id'],ENT_QUOTES, 'UTF-8'); ?>">
 <input type="submit" value="送信">
 </form>
+echo "<a href='index.php'>トップページへ戻る</a>";
 </body>
 </html>
